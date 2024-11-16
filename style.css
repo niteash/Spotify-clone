@@ -27,11 +27,14 @@ body{
 }
 
 .music-player{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: black;
     bottom: 0;
     position: fixed;
     width: 100%;
-    height: 72px;
+    height: 6rem;
 }
 
 a{
@@ -203,12 +206,7 @@ a{
     opacity: 0.4;
 }
 
-.music-player{
-    display: flex;
-    height: 80px;
-    
 
-}
 .album{
     width: 25%;
     display: flex;
@@ -252,22 +250,29 @@ a{
 
 .player{
     width: 50%;
-    background-color: rgb(153, 153, 78);
-}
-
-.control{
-    width:25%;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: space-between;
+    /* background-color: rgb(153, 153, 78); */
     align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
+
+.player-controls{
+    margin: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 .player-control-icon{
     height: 1rem;
+    opacity: 0.7;
+    margin-right: 1.75rem;
 }
-
+.player-control-icon:hover{
+    opacity: 1;
+}
 .control-icons{
     display: flex;
     justify-content: center;
@@ -275,16 +280,47 @@ a{
     height: 100px;
 }
 
+.playback-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-bar{
+    width: 70%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+
+}
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
 #speaker{
     width: 1.7rem;
     height: 1.7rem;
 }
 .con-icons{
     opacity: 0.8;
-    color: white;
     width: 1.2rem;
-    height: 1.2rem;
-    margin: 0 0 0 1rem;
+    height: 1rem;
+    margin: 0 0 0 0.6rem;
+}
+
+.control{
+    width:25%;
+  
 }
 
 .control-bar{
@@ -294,12 +330,26 @@ a{
 
 }
 
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
+
+
+.slider::-webkit-slider-thumb{
     appearance: none;
-    width: 4px; 
-    height: 4px; 
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
 }
+
+
+.slider::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+
+}
+
+
 
 
 
